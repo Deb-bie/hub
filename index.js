@@ -48,12 +48,12 @@ intl.forEach(link => {
         const html = response.data 
         const $ = cheerio.load(html)
 
-        $('.item-list .item-list-li', html).each(function () {
-            const title = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').text()
-            const image = $(this).children('ul').children('.item-logo').children('a').children('img').attr('src')
-            const url = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').attr("href")
-            const desc = $(this).children('ul').children('.item-details').children('ul').children('.item-desc').text()
-            const deadline = $(this).children('ul').children('.item-details').children('ul').children('li').last().children('ul').children('li').first().children('span').text()
+        $('.item-list .item-list-li ul .item-details', html).each(function () {
+            const title = $(this).children('ul').children('.item-h2').children('h2').children('a').text()
+            const image = $(this).prev('.item-logo').children('a').children('img').attr('src')
+            const url = $(this).children('ul').children('.item-h2').children('h2').children('a').attr("href")
+            const desc = $(this).children('ul').children('.item-desc').text()
+            const deadline = $(this).children('ul').children('li').last().children('ul').children('li').first().children('span').text()
             const pre = "https://www.scholarshiptab.com"
 
             article.push({
@@ -76,12 +76,12 @@ intl.forEach(link => {
         const html = response.data 
         const $ = cheerio.load(html)
 
-        $('.item-list .item-list-li', html).each(function () {
-            const title = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').text()
-            const image = $(this).children('ul').children('.item-logo').children('a').children('img').attr('src')
-            const url = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').attr("href")
-            const desc = $(this).children('ul').children('.item-details').children('ul').children('.item-desc').text()
-            const deadline = $(this).children('ul').children('.item-details').children('ul').children('li').last().children('ul').children('li').first().children('span').text()
+        $('.item-list .item-list-li ul .item-details', html).each(function () {
+            const title = $(this).children('ul').children('.item-h2').children('h2').children('a').text()
+            const image = $(this).prev('.item-logo').children('a').children('img').attr('src')
+            const url = $(this).children('ul').children('.item-h2').children('h2').children('a').attr("href")
+            const desc = $(this).children('ul').children('.item-desc').text()
+            const deadline = $(this).children('ul').children('li').last().children('ul').children('li').first().children('span').text()
             const pre = "https://www.scholarshiptab.com"
 
             masters.push({
@@ -104,12 +104,12 @@ intl.forEach(link => {
         const html = response.data 
         const $ = cheerio.load(html)
 
-        $('.item-list .item-list-li', html).each(function () {
-            const title = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').text()
-            const image = $(this).children('ul').children('.item-logo').children('a').children('img').attr('src')
-            const url = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').attr("href")
-            const desc = $(this).children('ul').children('.item-details').children('ul').children('.item-desc').text()
-            const deadline = $(this).children('ul').children('.item-details').children('ul').children('li').last().children('ul').children('li').first().children('span').text()
+        $('.item-list .item-list-li ul .item-details', html).each(function () {
+            const title = $(this).children('ul').children('.item-h2').children('h2').children('a').text()
+            const image = $(this).prev('.item-logo').children('a').children('img').attr('src')
+            const url = $(this).children('ul').children('.item-h2').children('h2').children('a').attr("href")
+            const desc = $(this).children('ul').children('.item-desc').text()
+            const deadline = $(this).children('ul').children('li').last().children('ul').children('li').first().children('span').text()
             const pre = "https://www.scholarshiptab.com"
 
             undergrad.push({
@@ -132,14 +132,13 @@ intl.forEach(link => {
         const html = response.data 
         const $ = cheerio.load(html)
 
-        $('.item-list .item-list-li', html).each(function () {
-            const title = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').text()
-            const image = $(this).children('ul').children('.item-logo').children('a').children('img').attr('src')
-            const url = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').attr("href")
-            const desc = $(this).children('ul').children('.item-details').children('ul').children('.item-desc').text()
-            const deadline = $(this).children('ul').children('.item-details').children('ul').children('li').last().children('ul').children('li').first().children('span').text()
+        $('.item-list .item-list-li ul .item-details', html).each(function () {
+            const title = $(this).children('ul').children('.item-h2').children('h2').children('a').text()
+            const image = $(this).prev('.item-logo').children('a').children('img').attr('src')
+            const url = $(this).children('ul').children('.item-h2').children('h2').children('a').attr("href")
+            const desc = $(this).children('ul').children('.item-desc').text()
+            const deadline = $(this).children('ul').children('li').last().children('ul').children('li').first().children('span').text()
             const pre = "https://www.scholarshiptab.com"
-
             phd.push({
                 title,
                 image: pre + image,
@@ -160,12 +159,12 @@ intl.forEach(link => {
         const html = response.data 
         const $ = cheerio.load(html)
 
-        $('.item-list .item-list-li', html).each(function () {
-            const title = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').text()
-            const image = $(this).children('ul').children('.item-logo').children('a').children('img').attr('src')
-            const url = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').attr("href")
-            const desc = $(this).children('ul').children('.item-details').children('ul').children('.item-desc').text()
-            const deadline = $(this).children('ul').children('.item-details').children('ul').children('li').last().children('ul').children('li').first().children('span').text()
+        $('.item-list .item-list-li ul .item-details', html).each(function () {
+            const title = $(this).children('ul').children('.item-h2').children('h2').children('a').text()
+            const image = $(this).prev('.item-logo').children('a').children('img').attr('src')
+            const url = $(this).children('ul').children('.item-h2').children('h2').children('a').attr("href")
+            const desc = $(this).children('ul').children('.item-desc').text()
+            const deadline = $(this).children('ul').children('li').last().children('ul').children('li').first().children('span').text()
             const pre = "https://www.scholarshiptab.com"
 
             college.push({
@@ -188,12 +187,12 @@ intl.forEach(link => {
         const html = response.data 
         const $ = cheerio.load(html)
 
-        $('.item-list .item-list-li', html).each(function () {
-            const title = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').text()
-            const image = $(this).children('ul').children('.item-logo').children('a').children('img').attr('src')
-            const url = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').attr("href")
-            const desc = $(this).children('ul').children('.item-details').children('ul').children('.item-desc').text()
-            const deadline = $(this).children('ul').children('.item-details').children('ul').children('li').last().children('ul').children('li').first().children('span').text()
+        $('.item-list .item-list-li ul .item-details', html).each(function () {
+            const title = $(this).children('ul').children('.item-h2').children('h2').children('a').text()
+            const image = $(this).prev('.item-logo').children('a').children('img').attr('src')
+            const url = $(this).children('ul').children('.item-h2').children('h2').children('a').attr("href")
+            const desc = $(this).children('ul').children('.item-desc').text()
+            const deadline = $(this).children('ul').children('li').last().children('ul').children('li').first().children('span').text()
             const pre = "https://www.scholarshiptab.com"
 
             women.push({
@@ -217,14 +216,13 @@ intl.forEach(link => {
         const html = response.data 
         const $ = cheerio.load(html)
 
-        $('.item-list .item-list-li', html).each(function () {
-            const title = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').text()
-            const image = $(this).children('ul').children('.item-logo').children('a').children('img').attr('src')
-            const url = $(this).children('ul').children('.item-details').children('ul').children('.item-h2').children('h2').children('a').attr("href")
-            const desc = $(this).children('ul').children('.item-details').children('ul').children('.item-desc').text()
-            const deadline = $(this).children('ul').children('.item-details').children('ul').children('li').last().children('ul').children('li').first().children('span').text()
+        $('.item-list .item-list-li ul .item-details', html).each(function () {
+            const title = $(this).children('ul').children('.item-h2').children('h2').children('a').text()
+            const image = $(this).prev('.item-logo').children('a').children('img').attr('src')
+            const url = $(this).children('ul').children('.item-h2').children('h2').children('a').attr("href")
+            const desc = $(this).children('ul').children('.item-desc').text()
+            const deadline = $(this).children('ul').children('li').last().children('ul').children('li').first().children('span').text()
             const pre = "https://www.scholarshiptab.com"
-
             developing.push({
                 title,
                 image: pre + image,
@@ -242,4 +240,6 @@ app.get('/developing', (req, res) =>{res.json(developing)})
 
 
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
+
+
 
