@@ -5,6 +5,9 @@ const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio')
 const app = express()
+const cache = require('./routeCache')
+
+
 
 const intl = [
     {
@@ -68,7 +71,7 @@ intl.forEach(link => {
     })
 })
  
-app.get('/', (req, res) =>{res.json(article)})
+app.get('/', cache(88000), (req, res) =>{res.json(article)})
 
 
 intl.forEach(link => {
@@ -96,7 +99,7 @@ intl.forEach(link => {
     })
 })
  
-app.get('/master', (req, res) =>{res.json(masters)})
+app.get('/master', cache(88000), (req, res) =>{res.json(masters)})
 
 
 intl.forEach(link => {
@@ -124,7 +127,7 @@ intl.forEach(link => {
     })
 })
  
-app.get('/undergrad', (req, res) =>{res.json(undergrad)})
+app.get('/undergrad', cache(88000), (req, res) =>{res.json(undergrad)})
 
 
 intl.forEach(link => {
@@ -151,7 +154,7 @@ intl.forEach(link => {
     })
 })
  
-app.get('/phd', (req, res) =>{res.json(phd)})
+app.get('/phd', cache(88000), (req, res) =>{res.json(phd)})
 
 
 intl.forEach(link => {
@@ -179,7 +182,7 @@ intl.forEach(link => {
     })
 })
  
-app.get('/college', (req, res) =>{res.json(college)})
+app.get('/college', cache(88000), (req, res) =>{res.json(college)})
 
 
 intl.forEach(link => {
@@ -207,7 +210,7 @@ intl.forEach(link => {
     })
 })
  
-app.get('/women', (req, res) =>{res.json(women)})
+app.get('/women', cache(88000), (req, res) =>{res.json(women)})
 
 
 
@@ -235,7 +238,7 @@ intl.forEach(link => {
     })
 })
  
-app.get('/developing', (req, res) =>{res.json(developing)})
+app.get('/developing', cache(88000), (req, res) =>{res.json(developing)})
 
 
 
